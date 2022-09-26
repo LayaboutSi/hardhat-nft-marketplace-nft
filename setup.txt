@@ -1,0 +1,74 @@
+yarn init
+
+yarn add --dev hardhat
+
+yarn hardhat
+> copy contents of hardhat.config.js 
+
+yarn add --dev @nomicfoundation/hardhat-toolbox @nomicfoundation/hardhat-network-helpers @nomicfoundation/hardhat-chai-matchers @nomiclabs/hardhat-ethers @nomiclabs/hardhat-etherscan chai ethers hardhat-gas-reporter solidity-coverage @typechain/hardhat typechain @typechain/ethers-v5 @ethersproject/abi @ethersproject/providers
+
+>> Solhint
+yarn add --dev solhint
+> add .solhintignore
+> add .solhint.json
+
+>> PRETTIER
+yarn add --dev prettier prettier-plugin-solidity
+> add .prettierrc & .prettierignore
+
+>> Environment
+yarn add --dev dotenv
+> add .env file
+
+>> Deployment
+yarn add --dev hardhat-deploy
+> add helper-hardhat-config.js
+
+yarn add --dev @nomiclabs/hardhat-ethers@npm:hardhat-deploy-ethers ethers
+> add to hardhat.config.js
+>    require("hardhat-deploy");
+
+>> Chain Links
+yarn add --dev @chainlink/contracts
+> import "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol";
+> import "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
+
+>> Zeppelin
+yarn add --dev @openzeppelin/contracts
+
+>> Pinata
+yarn add --dev @pinata/sdk
++ dependency on >  yarn add --dev path 
+
+>> Base64
+yarn add --dev base64-sol
+
+
+>> Verification
+yarn add --dev @nomiclabs/hardhat-etherscan 
+> add helper-functions.js
+
+>> Gas Reporter
+yarn add --dev hardhat-gas-reporter
+
+
+
+>> Testing
+> add Test Folders
+> add Shell.test.js
+yarn hardhat test
+
+yarn hardhat deploy
+
+>> AAVE PROTOCOL
+yarn add --dev @openzeppelin/contracts   // dependency??
+yarn add --dev @aave/protocol-v2
+
+
+**** Verify with parameters
+yarn hardhat verify --contract "contracts/OurToken.sol:OurToken" --network rinkeby 0x066C886B568819a806F24d657e579eAA8976DD40 "1000000000000000000"
+
+
+
+
+

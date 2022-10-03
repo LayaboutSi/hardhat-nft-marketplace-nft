@@ -19,9 +19,9 @@ module.exports = {
   networks: {
     hardhat: {
       chainId: 31337,
-      forking: {
-        url: MAINNET_RPC_URL,
-      },
+      // forking: {
+      //   url: MAINNET_RPC_URL,
+      //  },
       //      blockConfirmations: 1,
     },
     localhost: {
@@ -38,6 +38,7 @@ module.exports = {
     rinkeby: {
       url: RINKEBY_RPC_URL,
       accounts: [PRIVATE_KEY],
+      saveDeployments: true,
       chainId: 4,
       blockConfirmations: 6,
       gas: 6000000,

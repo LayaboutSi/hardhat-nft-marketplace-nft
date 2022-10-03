@@ -21,7 +21,7 @@ contract NftMarketplace is ReentrancyGuard {
     address seller;
   }
 
-  event ItemListed(address indexed seller, address indexed nftAddress, uint256 indexed toeknId, uint256 price);
+  event ItemListed(address indexed seller, address indexed nftAddress, uint256 indexed tokenId, uint256 price);
   event ItemCancelled(address indexed seller, address indexed nftAddress, uint256 indexed tokenId);
   event ItemBought(address indexed buyer, address indexed nftAddress, uint256 indexed tokenId, uint256 price);
 
@@ -117,10 +117,6 @@ contract NftMarketplace is ReentrancyGuard {
    * @param tokenId Token ID of NFT
    */
   function buyItem(address nftAddress, uint256 tokenId) external payable isListed(nftAddress, tokenId) nonReentrant {
-    // Challenge - How would you refactor this contract to take:
-    // 1. Abitrary tokens as payment? (HINT - Chainlink Price Feeds!)
-    // 2. Be able to set prices in other currencies?
-    // 3. Tweet me @PatrickAlphaC if you come up with a solution!
     Listing memory listedItem = s_listings[nftAddress][tokenId];
     if (msg.value < listedItem.price) {
       revert NftMarketplace__PriceNotMet(nftAddress, tokenId, listedItem.price);

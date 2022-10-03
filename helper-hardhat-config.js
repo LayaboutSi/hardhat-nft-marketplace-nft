@@ -41,10 +41,20 @@ const networkConfig = {
 const DECIMALS = "18";
 const INITIAL_PRICE = "200000000000000000000";
 const developmentChains = ["hardhat", "localhost"];
+const VERIFICATION_BLOCK_CONFIRMATIONS = 6;
+const frontEndContractsFile = "../nextjs-nft-marketplace-fcc/constants/networkMapping.json";
+const frontEndContractsFile2 = "../nextjs-nft-marketplace-thegraph-fcc/constants/networkMapping.json";
+const frontEndAbiLocation = "../nextjs-nft-marketplace-fcc/constants/";
+const frontEndAbiLocation2 = "../nextjs-nft-marketplace-thegraph-fcc/constants/";
 
 module.exports = {
   networkConfig,
-  developmentChains,
   DECIMALS,
   INITIAL_PRICE,
+  developmentChains,
+  VERIFICATION_BLOCK_CONFIRMATIONS,
+  frontEndContractsFile,
+  frontEndContractsFile2,
+  frontEndAbiLocation,
+  frontEndAbiLocation2,
 };

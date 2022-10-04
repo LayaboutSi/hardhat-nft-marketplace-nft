@@ -7,9 +7,9 @@ require("hardhat-gas-reporter");
 require("dotenv").config();
 
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY;
-const KOVAN_RPC_URL = process.env.KOVAN_RPC_URL;
 const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL;
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL;
+const TESTACCOUNT01_PRIVATE_KEY = process.env.TESTACCOUNT01_PRIVATE_KEY;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL;
 
@@ -28,18 +28,19 @@ module.exports = {
       chainId: 31337,
       gas: 6000000,
     },
-    kovan: {
-      url: KOVAN_RPC_URL,
-      accounts: [PRIVATE_KEY],
-      chainId: 42,
+    rinkeby: {
+      url: RINKEBY_RPC_URL,
+      accounts: [TESTACCOUNT01_PRIVATE_KEY],
+      saveDeployments: true,
+      chainId: 4,
       blockConfirmations: 6,
       gas: 6000000,
     },
-    rinkeby: {
-      url: RINKEBY_RPC_URL,
-      accounts: [PRIVATE_KEY],
+    goerli: {
+      url: GOERLI_RPC_URL,
+      accounts: [TESTACCOUNT01_PRIVATE_KEY],
       saveDeployments: true,
-      chainId: 4,
+      chainId: 5,
       blockConfirmations: 6,
       gas: 6000000,
     },

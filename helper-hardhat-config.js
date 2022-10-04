@@ -36,6 +36,18 @@ const networkConfig = {
     interval: "30",
     mintFee: "10000000000000000", // 0/01 ETH
   },
+  5: {
+    name: "goerli",
+    keepersUpdateInterval: "30",
+    vrfCoordinatorV2: "0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D",
+    ethUsdPriceFeed: "0x8A753747A1Fa494EC906cE90E9f37563A8AF630e",
+    entranceFee: "100000000000000000", // 0.1 ETH
+    gasLane: "0xd89b2bf150e3b9e13446986e571fb9cab24b13cea0a43ea20a6049a85cc807cc",
+    subscriptionId: "20799",
+    callbackGasLimit: "500000",
+    interval: "30",
+    mintFee: "10000000000000000", // 0/01 ETH
+  },
 };
 
 const DECIMALS = "18";
